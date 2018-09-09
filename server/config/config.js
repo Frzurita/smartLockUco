@@ -21,12 +21,7 @@ const envVarsSchema = Joi.object({
     .required()
     .description("Mongo DB host url"),
   MONGO_PORT: Joi.number().default(27017),
-  MAX_PAGINATION_LIMIT: Joi.number().default(50),
-  HIVY_TOKEN: Joi.string()
-    .required()
-    .allow([process.env.HIVY_TOKEN])
-    .default(process.env.HIVY_TOKEN)
-    .description("Telegram bot token to send notifications through telegram")
+  MAX_PAGINATION_LIMIT: Joi.number().default(50)
 })
   .unknown()
   .required();
