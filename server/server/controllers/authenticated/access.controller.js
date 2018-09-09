@@ -1,5 +1,5 @@
 import config from '../../../config/config'
-import APIError from '../../helpers/APIError'
+import APIError from '../../services/APIError'
 import Access from '../../models/Access.model'
 
 async function getList (req, res, next) {

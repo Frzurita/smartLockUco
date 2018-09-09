@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import httpStatus from 'http-status'
-import APIError from '../../helpers/APIError'
+import APIError from '../../services/APIError'
 import config from '../../../config/config'
 import User from '../../models/User.model'
 

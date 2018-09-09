@@ -1,4 +1,4 @@
-import APIError from '../../helpers/APIError'
+import APIError from '../../services/APIError'
 import config from '../../../config/config'
 import Card from '../../models/Card.model'
 import Lock from '../../models/Lock.model'

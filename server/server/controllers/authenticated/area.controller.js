@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 import config from '../../../config/config'
-import APIError from '../../helpers/APIError'
+import APIError from '../../services/APIError'
 import Area from '../../models/Area.model'
 
 async function getList (req, res, next) {

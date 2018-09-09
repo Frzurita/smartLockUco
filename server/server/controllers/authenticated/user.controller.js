@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs'
-import APIError from '../../helpers/APIError'
+import APIError from '../../services/APIError'
 import User from '../../models/User.model'
 import config from '../../../config/config'
 
