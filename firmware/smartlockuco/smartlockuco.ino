@@ -15,7 +15,7 @@
 // Setting NFC shield params
 #define SCK         7
 #define MOSI        6
-#define SS          10
+#define SS          9
 #define MISO        2
 
 // Initializing NFC library
@@ -40,15 +40,15 @@ String lockId = "5b89c01fa3a53a068849d0da";
 byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED};
 
 // IPAddress
-char server[] = "192.168.1.131";
+char server[] = "192.168.1.133";
 
 // Set the static IP address to use if the DHCP fails to assign
-IPAddress ip(192, 168, 1, 142);
+IPAddress ip(192, 168, 1, 132);
 
 // Setting all variables
 int redPin = 8; // Red led
-int greenPin = 9; // Green led
-int doorPin = 11; // lock relay
+int greenPin = 5; // Green led
+int doorPin = 4; // lock relay
 String message;
 bool isReadyToRead = false;
 
@@ -73,14 +73,14 @@ void tarjectDetection( int event, int params ) {
     card = "nfcCredentials: " + cardId;
     lock = "lockId: " + lockId;
     
-    // Serial.println(card);
+    Serial.println(card);
     digitalWrite(greenPin, HIGH);
-    // Serial.println("NFC card readed");
-    // Serial.println("NFC cart sent");
+     Serial.println("NFC card readed");
+     Serial.println("NFC cart sent");
     isReadyToRead = true;
      if (client.connect(server, 3500)) {
       Serial.println("connected");
-      client.println("POST /api/public/lock/check HTTP/1.1");
+      client.println("GET /api/public/access HTTP/1.1");
       client.println("Connection: close");
       client.println(card);
       client.println(lock);
@@ -99,10 +99,10 @@ void getConfirmationFromServer( int event, int param ) {
     String cadena = message.substring(initialIndex + 2, finalIndex);
 
     
-    // Serial.println(cadena);
-    // Serial.println();
+     Serial.println(cadena);
+     Serial.println();
     client.stop();
-    // Serial.println(cadena);
+     Serial.println(cadena);
 
     // Sequence to handle the green led and lock pin when the access is success
     if(cadena == "success"){
@@ -138,28 +138,40 @@ void getConfirmationFromServer( int event, int param ) {
 void setup()
 {
     // Open serial monitor communication channel
-    // Serial.begin(9600);
+     Serial.begin(9600);
+     if(!Serial) { delay(100); }
 
     // Initialize nfc
     nfc.begin();
+
+     //Comprobamos que tenemos puesta la shield
+     uint32_t versiondata = nfc.getFirmwareVersion();
+     if( ! versiondata ) {
+          while (1) { delay (100); } //No continuamos con el programa
+     }
+     
     nfc.SAMConfig();
+
+    Serial.println("Serial initialized");
 
     // start the Ethernet connection:
     if (Ethernet.begin(mac) == 0) {
-      // Serial.println("Failed to configure Ethernet using DHCP");
+       Serial.println("Failed to configure Ethernet using DHCP");
       // try to congifure using IP address instead of DHCP:
       Ethernet.begin(mac, ip);
     }
 
     // give the Ethernet shield a second to initialize:
     delay(1000);
-    // Serial.println("connecting...");
+     Serial.println("connecting...");
 
-    // Serial.println("Placa preparada para leer!");
+     Serial.println("Placa preparada para leer!");
     // Setup
     pinMode( redPin, OUTPUT );
     pinMode( greenPin, OUTPUT );
     pinMode( doorPin, OUTPUT );
+
+    digitalWrite(doorPin, HIGH);
     // Add our listener
     gEM.addListener( EventManager::kEventUser0, tarjectDetection );
     gEM.addListener( EventManager::kEventUser1,  getConfirmationFromServer );
@@ -171,9 +183,8 @@ void loop()
     gEM.processEvent();
 
     id = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A);
-    if(id != 0){
-        Serial.println(id);
-        tarjectDetectionQueue();
+    if(id){
+     tarjectDetectionQueue();
     }
   // if there are incoming bytes available
   // from the server, store them in message
