@@ -1,0 +1,7 @@
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/CMakeFiles/smartlockuco-upload.dir
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/CMakeFiles/uno_PN532.dir
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/CMakeFiles/smartlockuco-size.dir
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/CMakeFiles/smartlockuco.dir
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/CMakeFiles/uno_EventManager.dir
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/CMakeFiles/upload.dir
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/CMakeFiles/uno_CORE.dir

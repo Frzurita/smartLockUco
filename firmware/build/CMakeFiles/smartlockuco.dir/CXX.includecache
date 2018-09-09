@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../EventManager/EventManager.h
+Arduino.h
+-
+
+../PN532/PN532.h
+Arduino.h
+../PN532/Arduino.h
+WProgram.h
+../PN532/WProgram.h
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/EventManager/EventManager.cpp
+EventManager.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/EventManager/EventManager.h
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/EventManager/EventManager.h
+Arduino.h
+-
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/PN532.cpp
+PN532.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/PN532.h
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/PN532.h
+Arduino.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/Arduino.h
+WProgram.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/WProgram.h
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/smartlockuco_smartlockuco.ino.cpp
+Arduino.h
+-
+EventManager.h
+-
+PN532.h
+-
+Arduino.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/build/Arduino.h
+

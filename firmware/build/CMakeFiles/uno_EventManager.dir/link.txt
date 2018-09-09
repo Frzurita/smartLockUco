@@ -1,0 +1,2 @@
+/Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin/avr-ar qc libuno_EventManager.a  CMakeFiles/uno_EventManager.dir/EventManager/EventManager.cpp.obj
+/Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin/avr-ranlib libuno_EventManager.a

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/PN532.cpp
+PN532.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/PN532.h
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/PN532.h
+Arduino.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/Arduino.h
+WProgram.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/PN532/WProgram.h
+

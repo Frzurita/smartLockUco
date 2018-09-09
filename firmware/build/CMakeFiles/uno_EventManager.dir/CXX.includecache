@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/EventManager/EventManager.cpp
+EventManager.h
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/EventManager/EventManager.h
+
+/Users/franciscozuritagonzalez/Desktop/personal folder/Proyecto/smarlockuco/smartlockuco/EventManager/EventManager.h
+Arduino.h
+-
+
